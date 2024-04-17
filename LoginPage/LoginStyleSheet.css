@@ -2,6 +2,7 @@
 
 :root {
     --c-text-light: whitesmoke;
+    --c-text-dark: lightgrey;
     --c-button: whitesmoke;
     --c-button-hover: rgb(0, 0, 0, 0.5);
 }
@@ -31,7 +32,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -47,7 +48,10 @@ form {
     max-width: 50%;
     padding: clamp(1rem, 10vh, 2rem);
     margin: clamp(1rem, 10vh, 2rem);
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
     text-align: center;
     color: var(--c-text-light);
@@ -115,4 +119,12 @@ form > [type="submit"] {
 form > [type="submit"]:hover {
     background-color: var(--c-button-hover);
     color: var(--c-text-light);
+}
+
+form a {
+    color: var(--c-text-light);
+}
+
+form a:hover {
+    color: var(--c-text-dark);
 }
