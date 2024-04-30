@@ -4,7 +4,7 @@
     --c-background: #1E1E2A;      /* black-russian */
     --c-foreground-dark: #44404D; /* grape */
     --c-foreground: #7B7794;      /* topaz */
-    --c-solid-pink: #7D444F;      /* solid-pink */
+    --c-secondary: #7D444F;       /* solid-pink */
     --c-highlight: #EB9653;       /* sea-buckthorn */
     --c-text-light:ghostwhite;    /* */
 }
@@ -28,6 +28,19 @@ body {
     display: flex;
     flex-direction: row;
     column-gap: 1rem;
+}
+
+header {
+    background-color: var(--c-foreground-dark);
+    border-radius: 1rem;
+    flex: 0 0 25%;
+}
+
+main {
+    background-color: var(--c-foreground-dark);
+    border-radius: 1rem;
+    padding: 1rem;
+    flex: 1 1 auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -117,13 +130,17 @@ h1, h2, h3, h4, h5, h6 {
         row-gap: 1rem;
     }
 
+    header {
+        flex: 0 0 auto;
+    }
+
     .bo-flex-container {
         flex-direction: column;
     }
 
     .bo-navbar {
         flex-direction: row;
-        flex: 0 0 auto;
+        flex: 1 1 auto;
     }
 
     .bo-navbar-btn {
