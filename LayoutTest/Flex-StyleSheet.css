@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
     .bo-nav-link:hover {
-        background-color: var(--c-solid-pink);
+        background-color: var(--c-secondary);
     }
 
 .bo-flex-container {
