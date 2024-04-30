@@ -47,6 +47,23 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
 
+.bo-bg-background { background-color: var(--c-background); }
+.bo-bg-foreground-dark { background-color: var(--c-foreground-dark); }
+.bo-bg-foreground { background-color: var(--c-foreground); }
+.bo-bg-secondary { background-color: var(--c-secondary); }
+.bo-bg-highlight { background-color: var(--c-highlight); }
+
+.bo-d-flex { display: flex; }
+.bo-flex-row { flex-direction: row; }
+.bo-flex-col { flex-direction: column; }
+.bo-flex-wrap { flex-wrap: wrap; }
+
+.bo-panel {
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 0rem; /* top-bottom | left-right */
+}
+
 .bo-navbar {
     background-color: var(--c-foreground-dark);
     border-radius: 1rem;
