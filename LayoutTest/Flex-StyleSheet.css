@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+:root {
+    --c-black-russian: #1E1E2A;
+    --c-solid-pink: #7D444F;
+    --c-topaz: #7B7794;
+    --c-sea-buckthorn: #EB9653;
+    --c-grape: #44404D;
+    --c-text-light:ghostwhite;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: normal;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--c-black-russian);
+    color: var(--c-text-light);
+    overflow: auto;
+    height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+}
+
+.bo-navbar {
+    background-color: var(--c-grape);
+    border-radius: 1rem;
+    padding: 1rem;
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+
+.bo-navbar-btn {
+    background-color: var(--c-topaz);
+    color: var(--c-text-light);
+    border: none;
+    border-radius: 10%;
+    padding: 1rem;
+    display: none;
+    margin-left: auto;
+}
+
+    .bo-navbar-btn:hover {
+        background-color: var(--c-sea-buckthorn);
+    }
+
+.bo-navbar-collapse {
+    width: 100%;
+}
+
+.bo-nav {
+    list-style-type: none;
+    width: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.bo-nav-item {
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+.bo-nav-logo {
+    padding: 1rem;
+    color: var(--c-text-light);
+    text-decoration: none;
+    display: block;
+}
+
+.bo-nav-link {
+    text-align: left;
+    text-decoration: none;
+    color: var(--c-text-light);
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.2s;
+}
+
+    .bo-nav-link:hover {
+        background-color: var(--c-solid-pink);
+    }
+
+.bo-flex-container {
+    background-color: var(--c-grape);
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 100%;
+    flex: 1 0 auto;
+}
+
+/* md breakpoint */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .bo-flex-container {
+        flex-direction: column;
+    }
+
+    .bo-navbar {
+        flex-direction: row;
+        flex: 0 0 auto;
+    }
+
+    .bo-navbar-btn {
+        display: block;
+    }
+
+    .bo-navbar-collapse {
+        display: none;
+        margin-top: 1rem;
+    }
+
+        .bo-navbar-collapse.show {
+            display: block;
+        }
+
+    .bo-nav {
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        align-items: center;
+    }
+
+    .bo-nav-link {
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+}
