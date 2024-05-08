@@ -31,6 +31,14 @@ body {
     gap: 1rem;
 }
 
+header {
+    /**/
+}
+
+main {
+    /**/
+}
+
 .bo-navbar {
     background-color: var(--c-grape);
     border-radius: 1rem;

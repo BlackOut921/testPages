@@ -3,15 +3,16 @@ const _observer = new IntersectionObserver(entries => {
         if(entry.isIntersecting) {
             entry.target.classList.add("show");
         }
-        /*else {
+        else {
             entry.target.classList.remove("show");
-        }*/
+        }
     });
 });
 
-const _fadeElements = document.querySelectorAll(".bo-panel");
+//Get all elements that use classSelector
+const _fadeElements = document.querySelectorAll(".bo-scroll-target");
 if(_fadeElements.length > 0) {
-    _fadeElements.forEach(Element => {
-        _observer.observe(Element);
+    _fadeElements.forEach(i => {
+        _observer.observe(i);
     });
 }
