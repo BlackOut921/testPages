@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale: 1.0" />
+        <style>
+            body { padding: 1rem; }
+            .bo-theme-switch-slider {
+                display: block;
+                width: 50%;
+                height: 100%;
+                background-color: white;
+                transform: translateX(0);
+                transition: 0.25s;
+                position: relative;
+                border-radius: 1rem;
+                text-align: center;
+                vertical-align: central;
+            }
+            .bo-theme-switch {
+                display: block;
+                background-color: lightgrey;
+                border: 1px solid darkgrey;
+                cursor: pointer;
+                transition: 0.25s;
+                padding: 1rem;
+                border-radius: 1rem;
+                margin: auto 0;
+            }
+                .bo-theme-switch:has(input:checked) {
+                    background-color: rgb(50, 50, 50);
+                }
+                .bo-theme-switch:has(input:checked) .bo-theme-switch-slider {
+                    background-color: darkgrey;
+                    transform: translateX(100%);
+                }
+            .bo-theme-switch input { 
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <label class="bo-theme-switch" title="Toggle dark mode">
+            <input type="checkbox">
+            <span class="bo-theme-switch-slider">
+                slider
+            </span>
+        </label>
+    </body>
+</html>
